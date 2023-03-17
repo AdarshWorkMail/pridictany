@@ -1,0 +1,56 @@
+.footerContainer {
+  background-color: #222222;
+  color: white;
+  .aboutSection {
+    padding: 60px 90px 25px;
+    display: flex;
+    gap: 5%;
+    .contentArea {
+      width: 55%;
+      p {
+        margin-top: -14px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+      }
+      .links {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 45px;
+        li {
+          display: inline;
+          font-weight: 400;
+          font-size: 20px;
+          margin-right: 22px;
+        }
+      }
+      .socialLinks {
+        display: flex;
+        align-items: center;
+        a {
+          margin-right: 19px;
+        }
+      }
+    }
+    .formSection {
+      p {
+        margin-top: -20px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+  .companyInfo {
+    text-align: center;
+    padding-bottom: 4px;
+    padding-top: 25px;
+    p {
+      margin-top: 4px;
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

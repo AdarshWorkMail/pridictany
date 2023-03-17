@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 17px 13px 9px;
+  .navlinkContainer {
+    margin-left: 15px;
+    margin-right: 15px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline;
+        margin-right: 35px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #7b7b7b;
+        cursor: pointer;
+        &:hover,
+        &.active {
+          color: #ed1d25;
+        }
+      }
+    }
+  }
+  .register {
+    font-weight: 700;
+    margin-left: 30px;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+  }
+}
