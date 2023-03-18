@@ -59,8 +59,9 @@ const ManagerPerformance = () => {
                 width: "216px",
                 marginTop: "-15px",
               }}
+              hoverText="LET'S GO!"
             >
-              Find Out
+              FIND OUT
             </Button>
           </div>
         </div>

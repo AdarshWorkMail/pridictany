@@ -32,9 +32,23 @@ const NewsItem = () => {
 
 const LatestPredictionNews = () => {
   const sliderRef = useRef();
+  const isSlideItemHovered = useRef();
   const [maxSliderHeight, setMaxSliderHeight] = useState();
   const [currentElement, setCurrentElement] = useState();
   const [sliderArray, setSliderArtray] = useState([1, 2, 3, 4, 5]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (!isSlideItemHovered.current) {
+        setCurrentElement(
+          currentElement === sliderArray.length - 1 ? 0 : currentElement + 1
+        );
+      }
+    }, 5000);
+    return () => {
+      clearInterval(timer);
+    };
+  });
 
   useEffect(() => {
     setCurrentElement(Math.ceil((sliderArray.length - 1) / 2));
@@ -100,6 +114,8 @@ const LatestPredictionNews = () => {
           visibility: maxSliderHeight ? "visible" : "hidden",
           height: `${maxSliderHeight}px`,
         }}
+        onMouseEnter={() => (isSlideItemHovered.current = true)}
+        onMouseLeave={() => (isSlideItemHovered.current = false)}
       >
         <img
           src={leftArrowWithCircle}

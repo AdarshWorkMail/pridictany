@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Button = ({ children, style }) => {
+const Button = ({ children, style, hoverText = null }) => {
+  const [ishovered, setIsHovered] = useState(false);
   return (
     <button
       style={{
@@ -15,8 +16,10 @@ const Button = ({ children, style }) => {
         cursor: "pointer",
         ...style,
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {children}
+      {ishovered ? hoverText ?? children : children}
     </button>
   );
 };

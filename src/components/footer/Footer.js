@@ -57,6 +57,10 @@ const Footer = () => {
         <div className={styles.formSection}>
           <h1>Don’t miss out</h1>
           <p>Enter your email now to stay ahead of the game!</p>
+          <div className={styles.form}>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email address" />
+          </div>
           <p style={{ marginTop: "25px" }}>
             Join Our Elite, Members-Only, Email List Today
           </p>
@@ -71,6 +75,7 @@ const Footer = () => {
               width: "216px",
               marginTop: "5px",
             }}
+            hoverText="LET'S GO!"
           >
             SAY NO MORE
           </Button>

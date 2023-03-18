@@ -114,6 +114,13 @@
   padding: 25px 90px;
   .slider {
     position: relative;
+    .leftArrow,
+    .rightArrow {
+      transition: all 0.2s;
+      &:hover {
+        filter: grayscale(1) invert(1);
+      }
+    }
     .leftArrow {
       position: absolute;
       left: -50px;
@@ -206,11 +213,20 @@
   .imageContainer {
     display: flex;
     height: 589px;
-    gap: 7px;
     align-items: stretch;
     z-index: 1;
+    width: 717px;
     .imageItem {
       height: 100%;
+      opacity: 1;
+      transition: all 1s;
+      padding-left: 7px;
+      &.visible {
+        opacity: 1;
+      }
+      &.hidden {
+        opacity: 0;
+      }
     }
   }
   .contentText {
@@ -232,10 +248,146 @@
 
 .trendingPredictionsContainer {
   display: flex;
+  gap: 12%;
+  padding: 30px 150px 25px 150px;
   .showOffText {
-    width: 55%;
+    width: 54%;
+    h1 {
+      font-weight: 700;
+      font-size: 50px;
+      // line-height: 116%;
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: -25px;
+      padding-right: 15%;
+    }
+    .coverImage {
+      margin-top: 15px;
+    }
   }
   .predictions {
-    width: 45%;
+    width: 35%;
+    padding-top: 80px;
+    .subCard {
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      margin: auto;
+      position: relative;
+      box-sizing: border-box;
+      width: 82%;
+      padding: 38px 43px 30px;
+      min-width: 432px;
+      .title {
+        display: flex;
+        color: #595959;
+        font-weight: 600;
+        font-size: 20px;
+        p {
+          margin: 0px;
+        }
+        ul {
+          margin: 0px;
+        }
+      }
+      h1 {
+        margin: 5px 0 5px;
+        font-weight: 700;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .pred {
+        display: flex;
+        margin: 5px 0px;
+        font-weight: 400;
+        font-size: 15px;
+        align-items: center;
+        p {
+          margin: 0px;
+        }
+        a {
+          margin-left: 15px;
+          text-decoration: none;
+          color: #007aff;
+        }
+      }
+    }
+  }
+}
+
+.userPredictionChallengeContainer {
+  background: url(../../assets/Home/stock-market-green-red-candle-sticks.jpg),
+    #000000;
+  padding: 82px 100px;
+  color: white;
+  position: relative;
+  .blackBG {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.65);
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    .title {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -12px;
+      font-weight: 700;
+      font-size: 53px;
+      color: black;
+    }
+    .leftPre,
+    .rightPre {
+      img {
+        height: 552px;
+        width: 602px;
+      }
+      .blackTape {
+        box-sizing: border-box;
+        height: 92px;
+        margin-top: -5px;
+        width: 100%;
+        font-weight: 600;
+        font-size: 45px;
+        background-color: black;
+        display: flex;
+        padding-top: 9px;
+        // align-items: center;
+      }
+    }
+    .leftPre {
+      .blackTape {
+        justify-content: flex-start;
+        padding-left: 23px;
+        border-radius: 0px 0px 0px 30px;
+      }
+    }
+    .rightPre {
+      .blackTape {
+        justify-content: flex-end;
+        padding-right: 23px;
+        border-radius: 0px 0px 30px 0px;
+      }
+    }
+    .predictionChallangeImg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -78px;
+    }
   }
 }

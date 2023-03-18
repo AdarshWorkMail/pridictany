@@ -22,6 +22,7 @@ const TopAndBottomPredictor = () => {
             width: "216px",
             marginTop: "25px",
           }}
+          hoverText="LET'S GO!"
         >
           TAKE ME THERE
         </Button>
