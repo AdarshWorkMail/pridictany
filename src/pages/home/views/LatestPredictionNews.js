@@ -83,13 +83,13 @@ const LatestPredictionNews = () => {
       index === currentElement - 1 ||
       (currentElement === 0 && index === sliderArray.length - 1)
     ) {
-      return 20;
+      return 15;
     }
     if (
       index === currentElement + 1 ||
       (currentElement === sliderArray.length - 1 && index === 0)
     ) {
-      return 80;
+      return 85;
     }
     if (index - currentElement >= sliderArray.length - 2) {
       return -15;
@@ -141,7 +141,7 @@ const LatestPredictionNews = () => {
               style={{
                 left: `${calcPosition(index)}%`,
                 transform: `translate(-50%, -50%) scale(${
-                  index === currentElement ? 1 : 0.9
+                  index === currentElement ? 1 : 0.8
                 })`,
                 opacity:
                   calcPosition(index) > 0 && calcPosition(index) < 100 ? 1 : 0,

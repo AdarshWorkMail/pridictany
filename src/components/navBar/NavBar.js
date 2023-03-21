@@ -23,7 +23,7 @@ const NavBar = () => {
         style={{
           color: "white",
           backgroundColor: "#ED1D25",
-          marginLeft: "30px",
+          marginLeft: "20px",
         }}
       >
         Predict Now

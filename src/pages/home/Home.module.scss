@@ -1,7 +1,7 @@
 .mainContainer {
 }
 .managerPerformanceContainer {
-  padding: 39px 0px 39px 150px;
+  padding: 39px 0px 39px 110px;
   .managerInfo {
     display: flex;
     // justify-content: space-between;
@@ -9,10 +9,10 @@
       padding: 30px;
       display: flex;
       justify-content: flex-start;
-      align-items: center;
+      max-width: 654px;
       p {
         font-weight: 700;
-        font-size: 50px;
+        font-size: 47px;
       }
     }
     .managerImage {
@@ -34,7 +34,7 @@
         .action {
           width: 71px;
           color: white;
-          font-size: 14px;
+          font-size: 22px;
           font-weight: 600;
           border: none;
           border-radius: 4px;
@@ -116,13 +116,21 @@
   }
   .image {
     position: absolute;
-    left: 17%;
+    left: 11%;
     z-index: 1;
+    @media screen and (max-width: 1300px) {
+      left: 6%;
+    }
   }
 }
 
 .latestPredictionNewsConatiner {
-  padding: 25px 90px;
+  padding: 45px 90px 25px;
+  h1 {
+    font-weight: 700;
+    font-size: 43px;
+    margin-bottom: 0px;
+  }
   .slider {
     position: relative;
     .leftArrow,
@@ -156,12 +164,20 @@
   }
   .newsItem {
     width: 458.43px;
+    // width: 28vw;
     padding-bottom: 25px;
     min-height: 453px;
     position: relative;
     border: 0.8px solid #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media screen and (max-width: 1400px) {
+      zoom: 0.85;
+    }
+    @media screen and (max-width: 1200px) {
+      zoom: 0.8;
+    }
     // filter: drop-shadow(3px 3px 31px rgba(0, 0, 0, 0.25));
+
     .newsImg {
       width: 100%;
       height: 262px;
@@ -191,6 +207,17 @@
           letter-spacing: 0.03em;
           cursor: pointer;
         }
+        @media screen and (max-width: 1400px) {
+          .title {
+            font-size: 22px;
+          }
+          .subtitle {
+            font-size: 16px;
+          }
+          .readMore {
+            font-size: 16px;
+          }
+        }
       }
     }
     .publishedText {
@@ -212,6 +239,9 @@
   padding: 60px 100px;
   color: white;
   position: relative;
+  @media screen and (max-width: 1400px) {
+    padding: 60px 50px;
+  }
   .challengeExpertBlackBG {
     height: 100%;
     width: 100%;
@@ -227,6 +257,9 @@
     align-items: stretch;
     z-index: 1;
     width: 717px;
+    @media screen and (max-width: 1300px) {
+      zoom: 0.8;
+    }
     .imageItem {
       height: 100%;
       opacity: 1;
@@ -244,9 +277,13 @@
     margin-top: 15px;
     padding-left: 8%;
     z-index: 1;
+    @media screen and (max-width: 1250px) {
+      padding-left: 3%;
+    }
     .title {
       font-weight: 600;
       font-size: 50px;
+      white-space: nowrap;
     }
     .content {
       margin-top: -35px;
@@ -259,8 +296,12 @@
 
 .trendingPredictionsContainer {
   display: flex;
-  gap: 12%;
-  padding: 30px 150px 25px 150px;
+  gap: 7vw;
+  padding: 30px 150px 30px 150px;
+  @media screen and (max-width: 1250px) {
+    padding: 30px 60px 30px;
+    gap: 1vw;
+  }
   .showOffText {
     width: 54%;
     h1 {
@@ -291,6 +332,14 @@
       width: 82%;
       padding: 38px 43px 30px;
       min-width: 432px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+      z-index: inherit;
+      transition: all 0.2s;
+      &:hover {
+        z-index: 1;
+        transform: scale(1.2);
+        box-shadow: 0px 0px 78px rgba(30, 255, 30, 0.75);
+      }
       .title {
         display: flex;
         color: #595959;
@@ -351,21 +400,25 @@
     justify-content: center;
     position: relative;
     z-index: 1;
+    text-align: center;
     .title {
       position: absolute;
       text-align: center;
-      left: 50%;
-      transform: translateX(-50%);
+      // left: 50%;
+      // transform: translateX(-50%);
       top: -12px;
       font-weight: 700;
       font-size: 53px;
       color: black;
+      @media screen and (max-width: 1200px) {
+        font-size: 47px;
+      }
     }
     .leftPre,
     .rightPre {
       img {
-        height: 552px;
         width: 602px;
+        max-width: 45vw;
       }
       .blackTape {
         box-sizing: border-box;
@@ -378,6 +431,9 @@
         display: flex;
         padding-top: 9px;
         // align-items: center;
+        @media screen and (max-width: 1300px) {
+          font-size: 37px;
+        }
       }
     }
     .leftPre {

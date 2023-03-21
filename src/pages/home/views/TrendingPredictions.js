@@ -71,15 +71,15 @@ const TrendingPredictions = () => {
           return (
             <div
               className={styles.subCard}
-              style={{
-                boxShadow:
-                  index === 0
-                    ? "0px 0px 78px rgba(30, 255, 30, 0.75)"
-                    : "0px 4px 16px rgba(0, 0, 0, 0.25)",
+              // style={{
+              //   boxShadow:
+              //     index === 0
+              //       ? "0px 0px 78px rgba(30, 255, 30, 0.75)"
+              //       : "0px 4px 16px rgba(0, 0, 0, 0.25)",
 
-                transform: index === 0 && "scale(1.2) translateY(-12px)",
-                zIndex: index === 0 ? 1 : "inherit",
-              }}
+              //   transform: index === 0 && "scale(1.2) translateY(-12px)",
+              //   zIndex: index === 0 ? 1 : "inherit",
+              // }}
             >
               <div className={styles.title}>
                 <p>{item.name}</p>
